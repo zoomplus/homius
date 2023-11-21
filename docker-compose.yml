@@ -17,12 +17,12 @@ services:
       - "80:80"
     working_dir: "/frontend"
 
-  nginx:
-    build:
-      context: .
-      dockerfile: docker/nginx/Dockerfile
-    ports:
-      - "80:80"
-    depends_on:
-      - frontend
-      - backend
+#  nginx:
+#    build:
+#      context: .
+#      dockerfile: docker/nginx/Dockerfile
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - frontend
+#      - backend
