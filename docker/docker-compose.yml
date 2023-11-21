@@ -3,21 +3,21 @@ version: '3'
 services:
   backend:
     build:
-      context: ./backend
+      context: .
       dockerfile: ./backend/Dockerfile
     ports:
       - "3000:3000"
 
   frontend:
     build:
-      context: ./frontend
+      context: .
       dockerfile: ./frontend/Dockerfile
     ports:
       - "80:80"
 
   nginx:
     build:
-      context: ./nginx
+      context: .
       dockerfile: ./nginx/Dockerfile
     ports:
       - "80:80"
