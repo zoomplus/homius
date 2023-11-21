@@ -1,9 +1,9 @@
 FROM node:16 as builder
 WORKDIR /frontend
 
-COPY ../../frontend/package.json ./
+COPY /home/exchanger/frontend/package*.json ./
 RUN yarn install
 
-COPY ../../frontend/ .
+COPY /home/exchanger/frontend/ .
 
 RUN yarn build
