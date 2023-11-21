@@ -1,5 +1,5 @@
 # Используем минимальный образ Nginx для production
-FROM nginx:alpine
+FROM nginx:latest
 
 # Копируем собранные файлы React приложения
 COPY --from=builder /frontend/build /usr/share/nginx/html
