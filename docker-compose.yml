@@ -3,24 +3,24 @@ version: '3'
 services:
   backend:
     build:
-      context: docker
-      dockerfile: ./docker/backend/Dockerfile
+      context: .
+      dockerfile: docker/backend/Dockerfile
     ports:
       - "3000:3000"
     working_dir: "/backend"
 
   frontend:
     build:
-      context: docker
-      dockerfile: ./docker/frontend/Dockerfile
+      context: .
+      dockerfile: docker/frontend/Dockerfile
     ports:
       - "80:80"
     working_dir: "/frontend"
 
   nginx:
     build:
-      context: docker
-      dockerfile: ./docker/nginx/Dockerfile
+      context: .
+      dockerfile: docker/nginx/Dockerfile
     ports:
       - "80:80"
     depends_on:
