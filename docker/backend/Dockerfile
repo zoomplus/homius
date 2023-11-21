@@ -1,9 +1,9 @@
 FROM node:16
 WORKDIR /backend
-COPY /home/exchanger/backend/package*.json ./
+COPY ../backend/package*.json ./
 RUN yarn install
 
-COPY /home/exchanger/backend/ .
+COPY ../backend/ .
 
 EXPOSE 3000
 CMD ["npm", "run", "start:prod"]
