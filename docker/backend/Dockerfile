@@ -1,4 +1,5 @@
 FROM node:16
+RUN mkdir backend
 WORKDIR /backend
 
 COPY /home/exchanger/backend/package*.json ./

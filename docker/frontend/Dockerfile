@@ -1,4 +1,5 @@
 FROM node:16 as builder
+RUN mkdir frontend
 WORKDIR /frontend
 
 COPY /home/exchanger/frontend/package*.json ./
