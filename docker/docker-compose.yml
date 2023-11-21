@@ -7,6 +7,7 @@ services:
       dockerfile: ./backend/Dockerfile
     ports:
       - "3000:3000"
+    working_dir: "/backend"
 
   frontend:
     build:
@@ -14,6 +15,7 @@ services:
       dockerfile: ./frontend/Dockerfile
     ports:
       - "80:80"
+    working_dir: "/frontend"
 
   nginx:
     build:
