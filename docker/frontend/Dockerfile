@@ -3,6 +3,6 @@ WORKDIR /frontend
 COPY ../frontend/package*.json ./
 RUN yarn install
 
-COPY ../frontend/ .
+COPY ../frontend .
 
 RUN yarn build
