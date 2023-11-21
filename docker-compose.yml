@@ -16,6 +16,8 @@ services:
     ports:
       - "80:80"
     working_dir: "/frontend"
+    depends_on:
+      - backend
 
 #  nginx:
 #    build:
