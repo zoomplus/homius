@@ -11,10 +11,12 @@ const Layout = () => {
   return (
     <>
       <Header setOpenMenu={setOpenMenu} openMenu={openMenu} />
-      <div className="flex flex-row">
+      <div className="flex flex-row overflow-hidden">
         <NavigationMenu openMenu={openMenu} />
         <section className="container mx-auto">
-          <Outlet />
+          <div className="mr-6 sm:mr-0">
+              <Outlet />
+          </div>
         </section>
       </div>
       <Footer />

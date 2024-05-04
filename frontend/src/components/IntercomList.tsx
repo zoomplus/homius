@@ -19,7 +19,7 @@ const IntercomList = () => {
       <Typography.Title level={3}>Домофоны:</Typography.Title>
 
       {!intercomIsLoading && !intercomIsError && intercomData ? (
-        <div className="flex flex-row flex-wrap gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {intercomData.data.intercom.map((item) => (
             <Intercom
               key={item.name}
@@ -28,17 +28,14 @@ const IntercomList = () => {
               camera={item.camera[0].original}
               camera_stable={item.camera[0].mjpeg_new}
               preview={item.preview}
-              className="w-full sm:w-1/2 md:w-1/3 bg-section"
+              className="w-full bg-section"
             />
           ))}
         </div>
       ) : (
-        <div className="flex flex-row flex-wrap gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
           {[1, 2, 3].map((item) => (
-            <Intercom.Skeleton
-                key={item}
-                className="w-full sm:w-1/2 md:w-1/3 bg-section"
-            />
+            <Intercom.Skeleton key={item} className="w-full bg-section" />
           ))}
         </div>
       )}

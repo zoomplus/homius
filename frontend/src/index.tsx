@@ -29,7 +29,7 @@ root.render(
             algorithm: darkAlgorithm,
           }}
         >
-          <div className="overflow-hidden bg-main text-main-text">
+          <div className="bg-main text-main-text">
             <Router />
           </div>
         </ConfigProvider>
